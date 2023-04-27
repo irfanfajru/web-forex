@@ -1,14 +1,15 @@
 "use client";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navigation = [
-  { name: "Dashboard", href: "/dashboard", current: true },
-  { name: "Langganan", href: "/langganan", current: false },
-  { name: "Refferal", href: "/refferal", current: false },
-  { name: "Invoice", href: "/invoice", current: false },
+  { name: "Dashboard", href: "/dashboard" },
+  { name: "Langganan", href: "/langganan" },
+  { name: "Refferal", href: "/refferal" },
+  { name: "Invoice", href: "/invoice" },
 ];
 
 function classNames(...classes) {
@@ -16,6 +17,7 @@ function classNames(...classes) {
 }
 
 export default function Header() {
+  const currentPage = usePathname();
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -53,12 +55,14 @@ export default function Header() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current
+                          item.href == currentPage
                             ? "bg-gray-900 text-white"
                             : "text-gray-300 hover:bg-gray-700 hover:text-white",
                           "rounded-md px-3 py-2 text-sm font-medium"
                         )}
-                        aria-current={item.current ? "page" : undefined}
+                        aria-current={
+                          item.href == currentPage ? "page" : undefined
+                        }
                       >
                         {item.name}
                       </Link>
@@ -138,12 +142,12 @@ export default function Header() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current
+                    item.href == currentPage
                       ? "bg-gray-900 text-white"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white",
                     "block rounded-md px-3 py-2 text-base font-medium"
                   )}
-                  aria-current={item.current ? "page" : undefined}
+                  aria-current={item.href == currentPage ? "page" : undefined}
                 >
                   {item.name}
                 </Disclosure.Button>
