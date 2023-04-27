@@ -3,8 +3,12 @@ export const metadata = {
 };
 export default function Langganan() {
   return (
-    <div className="m-4">
-      <div className="grid gap-8 grid-cols-1 sm:grid-cols-3 ">
+    <div>
+      <h1 className="text-center mb-4 mt-4 text-2xl font-extrabold tracking-tight leading-none">
+        Price List
+      </h1>
+      <hr></hr>
+      <div className="mt-4 grid gap-8 grid-cols-1 sm:grid-cols-3 ">
         {/* plan 1 */}
         <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
           <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">
