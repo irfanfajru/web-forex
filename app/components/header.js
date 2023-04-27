@@ -3,7 +3,7 @@ import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-
+import Link from "next/link";
 const products = [
   {
     name: "Tutorial",
@@ -94,18 +94,18 @@ export default function Header() {
             </Transition>
           </Popover>
 
-          <a
-            href="#"
+          <Link
+            href="/register"
             className="inline-flex justify-center items-center py-2 px-8 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
           >
             Register
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/login"
             className="inline-flex justify-center hover:text-gray-900 items-center py-2 px-8 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400"
           >
             Log in <span aria-hidden="true">&rarr;</span>
-          </a>
+          </Link>
         </div>
       </nav>
       <Dialog
@@ -173,18 +173,18 @@ export default function Header() {
                 </a> */}
               </div>
               <div className="py-6">
-                <a
-                  href="#"
+                <Link
+                  href="/register"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Register
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  href="/login"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Log in
-                </a>
+                </Link>
               </div>
             </div>
           </div>
