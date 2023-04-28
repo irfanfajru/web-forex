@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -35,7 +36,13 @@ export default function Home() {
         <div className="grid grid-cols-1 gap-y-2 sm:gap-8 sm:gap-y-20 sm:grid-cols-2">
           {/* card */}
           <div>
-            <img className="rounded-xl" src="/accurate.jpg" />
+            <Image
+              className="rounded-xl"
+              src="/accurate.jpg"
+              alt="accurate"
+              width={800}
+              height={800}
+            />
           </div>
           <div>
             <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl">
@@ -48,7 +55,13 @@ export default function Home() {
           </div>
           {/* card */}
           <div className="sm:hidden">
-            <img className="rounded-xl" src="/transparent.jpg" />
+            <Image
+              alt="accurate"
+              width={800}
+              height={800}
+              className="rounded-xl"
+              src="/transparent.jpg"
+            />
           </div>
           <div>
             <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl">
@@ -61,18 +74,30 @@ export default function Home() {
             </p>
           </div>
           <div className="hidden sm:block">
-            <img className="rounded-xl" src="/transparent.jpg" />
+            <Image
+              alt="accurate"
+              width={800}
+              height={800}
+              className="rounded-xl"
+              src="/transparent.jpg"
+            />
           </div>
           {/* card */}
           <div>
-            <img className="rounded-xl" src="/highacc.jpg" />
+            <Image
+              alt="accurate"
+              width={800}
+              height={800}
+              className="rounded-xl"
+              src="/highacc.jpg"
+            />
           </div>
           <div>
             <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl">
               High Accuracy
             </h1>
             <p className="mb-8 text-lg font-normal lg:text-xl">
-              We provide highly accurate Forex signals based on our team's
+              We provide highly accurate Forex signals based on our teams
               extensive market analysis and technical expertise. Our signals
               have a high probability of success, which can increase your
               chances of making profitable trades.
