@@ -7,14 +7,20 @@ import Link from "next/link";
 import Image from "next/image";
 const products = [
   {
-    name: "Tutorial",
-    description: "tutorial",
-    href: "#",
+    name: "What is Forex",
+    href: "/education/what-is-forex",
   },
   {
-    name: "Free indikator mt4",
-    description: "Dapatkan gratis indikator mt4",
-    href: "#",
+    name: "Forex Technical Analysis",
+    href: "/education/forex-technical-analysis",
+  },
+  {
+    name: "Forex Technical Indicators",
+    href: "/education/forex-technical-indicators",
+  },
+  {
+    name: "Free MT4 Indicator",
+    href: "/education/free-mt4-indicator",
   },
 ];
 
@@ -32,7 +38,7 @@ export default function Header() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <Image
               width={100}
@@ -41,7 +47,7 @@ export default function Header() {
               src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg"
               alt=""
             />
-          </a>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -57,7 +63,7 @@ export default function Header() {
         <div className="hidden lg:flex lg:gap-x-5 lg:justify-end">
           <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 py-2 text-sm font-semibold leading-6 text-white">
-              Edukasi
+              Education
               <ChevronDownIcon
                 className="h-5 w-5 flex-none white"
                 aria-hidden="true"
@@ -73,7 +79,7 @@ export default function Header() {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-80 max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-80 overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
                 <div className="p-4">
                   {products.map((item) => (
                     <div
@@ -88,7 +94,6 @@ export default function Header() {
                           {item.name}
                           <span className="absolute inset-0" />
                         </a>
-                        <p className="mt-1 text-gray-600">{item.description}</p>
                       </div>
                     </div>
                   ))}
@@ -120,14 +125,16 @@ export default function Header() {
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <Image
+                width={100}
+                height={100}
                 className="h-8 w-auto"
                 src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg"
                 alt=""
               />
-            </a>
+            </Link>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -144,7 +151,7 @@ export default function Header() {
                   {({ open }) => (
                     <>
                       <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50">
-                        Edukasi
+                        Education
                         <ChevronDownIcon
                           className={classNames(
                             open ? "rotate-180" : "",
