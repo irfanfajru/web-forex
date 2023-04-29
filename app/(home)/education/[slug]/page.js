@@ -17,7 +17,10 @@ export default function Education({ params }) {
         <div className="md:w-4/5">
           <hr></hr>
           {konten.map((val) => (
-            <p className="mt-2 text-base font-normal md:text-lg">
+            <p
+              key={`words${val}`}
+              className="mt-2 text-base font-normal md:text-lg"
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
               euismod, nisl vel tristique blandit, est eros porta tortor, vitae
               hendrerit elit ex a nunc. Integer vehicula pellentesque justo. Nam
