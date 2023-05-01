@@ -1,6 +1,6 @@
 import PriceCard from "./priceCard";
 export const metadata = {
-  title: "Langganan",
+  title: "Subscribe",
 };
 const priceList = [
   {
@@ -17,7 +17,7 @@ const priceList = [
   },
   { title: "1 Year Plan", price: 130, month: 12, refPrice: 100 },
 ];
-export default function Langganan() {
+export default function Subscribe() {
   return (
     <div>
       <h1 className="text-center mb-4 mt-4 text-2xl font-extrabold tracking-tight leading-none">
