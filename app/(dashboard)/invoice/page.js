@@ -10,7 +10,7 @@ export default function Invoice() {
         Invoice History
       </h1>
       <hr></hr>
-      <div className="relative overflow-x-auto mt-4">
+      <div className="relative overflow-x-auto m-4">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
@@ -44,7 +44,7 @@ export default function Invoice() {
               >
                 INV01
               </th>
-              <td className="px-6 py-4">Standard Plan</td>
+              <td className="px-6 py-4">1 Year Plan</td>
               <td className="px-6 py-4">{new Date().toDateString()}</td>
               <td className="px-6 py-4">{new Date().toDateString()}</td>
               <td className="px-6 py-4">
@@ -52,7 +52,7 @@ export default function Invoice() {
                   Pending
                 </span>
               </td>
-              <td className="px-6 py-4">$ 49</td>
+              <td className="px-6 py-4">Rp 1560K</td>
               <td className="px-6 py-4">
                 <button
                   className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
@@ -72,7 +72,7 @@ export default function Invoice() {
               >
                 INV02
               </th>
-              <td className="px-6 py-4">Standard Plan</td>
+              <td className="px-6 py-4">3 Months Plan</td>
               <td className="px-6 py-4">{new Date().toDateString()}</td>
               <td className="px-6 py-4">{new Date().toDateString()}</td>
               <td className="px-6 py-4">
@@ -80,7 +80,7 @@ export default function Invoice() {
                   Success
                 </span>
               </td>
-              <td className="px-6 py-4">$ 49</td>
+              <td className="px-6 py-4">Rp 420K</td>
               <td className="px-6 py-4"></td>
               <td className="px-6 py-4">
                 <a href="#">Download</a>

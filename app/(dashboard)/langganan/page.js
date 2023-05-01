@@ -4,18 +4,18 @@ export const metadata = {
 };
 const priceList = [
   {
-    title: "One Month Plan",
+    title: "1 Month Plan",
     price: 150,
     month: 1,
     refPrice: 130,
   },
   {
-    title: "Three Month Plan",
+    title: "3 Months Plan",
     price: 140,
     month: 3,
     refPrice: 110,
   },
-  { title: "One Year Plan", price: 130, month: 12, refPrice: 100 },
+  { title: "1 Year Plan", price: 130, month: 12, refPrice: 100 },
 ];
 export default function Langganan() {
   return (
