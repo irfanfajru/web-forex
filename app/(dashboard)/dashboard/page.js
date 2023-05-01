@@ -36,7 +36,7 @@ export default function Dashboard() {
       </div>
       <div className="mt-4 gap-4 grid grid-cols-1 sm:grid-cols-3">
         {cards.map((e) => (
-          <DashboardCard item={e} />
+          <DashboardCard key={`${e.title}-card`} item={e} />
         ))}
       </div>
     </div>
