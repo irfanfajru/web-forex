@@ -3,14 +3,14 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 export default function PriceCard({ item }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [isRef, setIsRef] = useState(false);
-  const inputRef = (e) => {
-    if (e.target.value) return setIsRef(true);
-    return setIsRef(false);
-  };
+  // const [isRef, setIsRef] = useState(false);
+  // const inputRef = (e) => {
+  //   if (e.target.value) return setIsRef(true);
+  //   return setIsRef(false);
+  // };
   const closeModal = () => {
     setIsOpen(false);
-    setIsRef(false);
+    // setIsRef(false);
   };
   return (
     <>
@@ -28,9 +28,9 @@ export default function PriceCard({ item }) {
             /month
           </span>
         </div>
-        <p className="text-base font-normal mt-2">
+        {/* <p className="text-base font-normal mt-2">
           Get Rp {item.refPrice}K/month with the referral code
-        </p>
+        </p> */}
         <button
           onClick={() => setIsOpen(true)}
           type="button"
@@ -76,19 +76,17 @@ export default function PriceCard({ item }) {
                     <p>Plan</p>
                     <p>: {item.title}</p>
                     <p>Price</p>
-                    <p>: Rp {isRef ? item.refPrice : item.price}K/month</p>
-                    <p>Referral</p>
-                    <p>: {isRef ? "Yes" : "No"}</p>
+                    <p>: Rp {item.price}K/month</p>
+                    {/* <p>Referral</p>
+                    <p>: {isRef ? "Yes" : "No"}</p> */}
                   </div>
                   <hr></hr>
                   <div className="mt-2 grid grid-cols-2">
                     <p>Total</p>
-                    <p>
-                      : Rp {(isRef ? item.refPrice : item.price) * item.month}K
-                    </p>
+                    <p>: Rp {item.price * item.month}K</p>
                   </div>
                   {/* referral code */}
-                  <div className="mt-4">
+                  {/* <div className="mt-4">
                     <label
                       for="referralcode"
                       className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -103,7 +101,7 @@ export default function PriceCard({ item }) {
                       className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                       placeholder=""
                     ></input>
-                  </div>
+                  </div> */}
                   <div className="mt-4">
                     <button
                       type="button"
